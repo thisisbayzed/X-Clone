@@ -33,6 +33,7 @@ export async function GET(req, res) {
     const { currentUser } = await serverAuth(req, res);
     return NextResponse.json(currentUser);
   } catch (error) {
-    return NextResponse.json({ message: "Not authorized" }, { status: 401 });
+    console.log(error);
+    return NextResponse.json({ message: error.message });
   }
 }
