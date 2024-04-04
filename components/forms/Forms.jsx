@@ -32,7 +32,7 @@ function Forms({ placeholderText, isComment, postId }) {
     } catch (error) {
       toast.error("Something went wrong");
     }
-  }, [body, mutatePosts, postId, isComment]);
+  }, [body, mutatePosts, postId, isComment , mutateFetchedPost]);
 
   return (
     <div className="border-b-[1px] border-neutral-800 px-5 py-2">
@@ -69,7 +69,7 @@ function Forms({ placeholderText, isComment, postId }) {
             Create your memories & forget who forget you
           </p>
           <div className="flex flex-row items-center justify-center gap-4">
-            <Login children={"Write your thought"} />
+            <Login>{"Write your thought"}</Login>
           </div>
         </div>
       )}
