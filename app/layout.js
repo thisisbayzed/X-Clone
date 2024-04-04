@@ -5,7 +5,6 @@ import Sidebar from "@/layouts/Sidebar";
 import Followbar from "@/layouts/Followbar";
 import ToasterProvider from "@/context/ToasterProvider";
 import AuthProvider from "@/context/AuthProvider";
-import OnlineStatus from "@/context/OnlineStatus";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,7 +26,7 @@ export default function RootLayout({ children }) {
           <AuthProvider>
           <Sidebar />
           <ToasterProvider />
-          <OnlineStatus />
+
           {children}
           <Followbar />
           </AuthProvider>
