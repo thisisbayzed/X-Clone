@@ -4,7 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
 import { NextResponse } from "next/server";
 
-export const authOptions = {
+ const authOptions = {
   // adapter: PrismaAdapter(prisma), //if we use social login , then its usefull
   providers: [
     CredentialsProvider({
