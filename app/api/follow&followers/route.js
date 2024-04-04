@@ -2,9 +2,8 @@ import { NextResponse } from "next/server";
 import prisma from "@/db/prismadb";
 import serverAuth from "@/lib/serverAuth";
 
-
 // chatgapt code
- async function POST(req, res) {
+async function POST(req, res) {
   try {
     const { currentUser } = await serverAuth(req);
     const { UserId } = await req.json();
@@ -76,7 +75,7 @@ import serverAuth from "@/lib/serverAuth";
 
 // chatgpt code
 
- async function DELETE(req, res) {
+async function DELETE(req, res) {
   try {
     const { currentUser } = await serverAuth(req);
     const { UserId } = await req.json();
