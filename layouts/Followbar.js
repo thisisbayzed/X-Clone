@@ -38,7 +38,7 @@ function Followbar() {
     <div className="bg-[#16181c] p-5 ml-8 mt-8 w-[30%] rounded-lg mr-12 h-[300px] overflow-y-auto scrollbar-thin scrollbar-thumb-pink scrollbar-track-transparent">
       <h1 className="text-[24px] font-extrabold text-white">Who to follow </h1>
       <div className="flex flex-col gap-4 mt-4">
-        {filteredUsers.map((user: Record<string, any>) => (
+        {filteredUsers.map((user) => (
           <div key={user.id} className="flex flex-row gap-4 mb-3 cursor-pointer">
             <Avaters UserId={user.id} />
             <div className="flex flex-col">

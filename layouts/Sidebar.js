@@ -29,7 +29,7 @@ function Sidebar() {
     }
   });
 
-  const HandleDynamicRoute = async (path: string) => {
+  const HandleDynamicRoute = async () => {
     if (data.status === "authenticated" && path == "/logout") {
       toast.error("Logout successfully");
       await signOut();
@@ -69,7 +69,7 @@ function Sidebar() {
       {data.status === "authenticated" ? (
         <Tweets />
       ) : (
-        <Login children={"login"} />
+        <Login  >{"login"}</Login>
       )}
       {/* Registations components */}
       {data.status === "authenticated" ? null : <Register />}
