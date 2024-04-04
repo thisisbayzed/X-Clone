@@ -8,12 +8,11 @@ import { AiOutlineMessage, AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import useLikes from "@/hooks/useLikes";
 import { toast } from "react-hot-toast";
 
-function PostItmes({ UserId, data }) {
+function PostItmes({  data }) {
   const Router = useRouter();
   const { data: currentUser } = useCurrentUser();
   const { isLiked, toggleLike } = useLikes({
     postId: data?.id,
-    UserId: UserId,
   });
 
   const HandleProfileGo = useCallback(

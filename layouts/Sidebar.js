@@ -29,7 +29,7 @@ function Sidebar() {
     }
   });
 
-  const HandleDynamicRoute = async () => {
+  const HandleDynamicRoute = async (path) => {
     if (data.status === "authenticated" && path == "/logout") {
       toast.error("Logout successfully");
       await signOut();
